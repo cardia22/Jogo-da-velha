@@ -96,6 +96,13 @@ function handleBoardClick(ev) {
     updateTitle()
   } else {
     document.querySelector('h2').innerHTML = 'Empate!'
+    setTimeout(function() {
+        document.querySelector('h2').innerHTML = ''
+        document.getElementById("player1").value = ""
+        document.getElementById("player2").value = ""
+    
+          initializeGame()
+        }, 2000) // espera 2 segundos antes de reiniciar o jogo
   }
 }
 
